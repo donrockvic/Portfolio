@@ -1,0 +1,25 @@
+ #pic{
+    
+   border-radius: 50%;
+ }
+
+ .slink:link {
+   text-decoration: none;
+   font-size: 1em;
+   color: #000;
+ }
+
+ /* visited link */
+ .slink:visited {
+  color: #000;
+}
+
+/* mouse over link */
+ .slink:hover {
+  color: #000;
+}
+
+/* selected link */
+ .slink:active {
+  color: #000;
+}

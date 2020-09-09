@@ -3,52 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>V!CKY :) </title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
  	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/progressbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
 
 </head>
-
 <body>
-	<!--  -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="{{ url_for('home') }}">Vicky</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="nav-link" href="#EXPERIENCE">Experience</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="{{ url_for('predict') }}">Projects</a>
-		</li>
-    <li class="nav-item">
-			<a class="nav-link" href="#ACECERT">Acheivement</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="mailto:Vicky123kumar22@gmail.com">Contact Me</a>
-		</li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://drive.google.com/file/d/1rYZeCgrniPf-mmKQpAxJfLj1xIgU7XVY/view?usp=sharing">Resume</a>
-    </li>
-	</ul>
-</div>
-</nav>
-
-	<!--  -->
-	<div class="container-fluid">
 		{% block body %}
-		{% endblock %}
-	</div>
 
+		{% endblock %}
 </body>
 <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"> </script>
-<script type="text/javascript">
-  $(window).scroll(function(){
-    $('nav').toggleClass('scrolled', $(this).scrollTop() > 800);
-  });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 
 </html>
