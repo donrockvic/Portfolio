@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tox-progress.css') }}">
 <!-- NAV -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
 <a class="navbar-brand" href="#home">Vicky</a>
@@ -33,48 +34,48 @@
 <span id="home"></span>
 <!-- Introduction  -->
 <section>
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-5">
-        <h5>Hey There,</h5>
-        <span class="display-5">I am </span><span class="display-4">Vicky Kumar</span>
-        <p class="lead">SOFTWARE DEVELOPER</p>
-        <p>A indendent and self-motivated software developer with 2+ year of experience and proven ability and experience in managing huge data, RDBMS, devloping web application using full stack and Data science projects with DS and Algo.I  have also participated in various competitions of competitive programming.  </p>
 
-        <a href="https://github.com/donrockvic/" target="_blank" class="slink">
-          <img class="img-fluid"  src="{{ url_for('static', filename='images/001-github-sign.png') }}" alt="GITHUB">
-          github.com/donrockvic/
-        </a>
-        <br><br>
-        <a href="https://www.kaggle.com/vsevicky" target="_blank" class="slink">
-          <img class="img-fluid"  src="{{ url_for('static', filename='images/002-letter-k.png') }}" alt="KAGGLE">
-          kaggle.com/vsevicky
-        </a>
-        <br><br>
-        <a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
-          <img class="img-fluid"  src="{{ url_for('static', filename='images/004-linkedin.png') }}" alt="Vicky">
-          linkedin.com/in/vicky-kumar-19192998/
-        </a>
+		<div class="jumbotron jumbotron-fluid">
+		  <div class="container-fluid">
+				<div class="row justify-content-md-center">
+					<div class="col-lg-8">
+						<center>
+							<img class="  image img-thumbnail" id="pic" src="{{ url_for('static', filename='images/2016.jpg') }}" alt="Vicky">
+							<h1 class="display-4">Vicky Kumar</h1>
+						</center>
+						<p class="lead">A indendent and self-motivated software developer with 2+ year of experience and proven ability and experience in managing huge data, RDBMS, devloping web application using full stack and Data science projects with DS and Algo.I  have also participated in various competitions of competitive programming.  </p>
+						<center>
+						<a href="https://github.com/donrockvic/" target="_blank" class="slink">
+							<img class="img-fluid"  src="{{ url_for('static', filename='images/001-github-sign.png') }}" alt="GITHUB">
+							<!-- github.com/donrockvic/ -->
+						</a>&nbsp;&nbsp;&nbsp;
+						<a href="https://www.kaggle.com/vsevicky" target="_blank" class="slink">
+							<img class="img-fluid"  src="{{ url_for('static', filename='images/002-letter-k.png') }}" alt="KAGGLE">
+							<!-- kaggle.com/vsevicky -->
+						</a>&nbsp;&nbsp;&nbsp;
+						<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
+							<img class="img-fluid"  src="{{ url_for('static', filename='images/004-linkedin.png') }}" alt="Vicky">
+							<!-- linkedin.com/in/vicky-kumar-19192998/ -->
+						</a>
+						</center>
+					</div>
+				</div>
 
-      </div>
-      <div class="col-md-4 d-none d-md-block">
-        <img class="img-fluid image" id="pic" src="{{ url_for('static', filename='images/2016.jpg') }}" alt="Vicky">
-      </div>
-    </div>
-  </div>
+		  </div>
+		</div>
+
 </section>
-<br><br>
 <!-- Intro end -->
 <!--  Experience -->
 <div id="EXPERIENCE"></div><br><br><br>
 <section >
-  <div class="container">
+  <div class="container-fluid">
     <div class="heading">
       <h2>EXPERIENCE</h2>
     </div>
     <!-- First Ecperience -->
     <div class="row justify-content-md-center ">
-      <div class="col-md-10 com-sm-8">
+      <div class="col-md-8 com-sm-8	">
         <h4>WIPRO ,<small> Banglore,India</small></h4>
         <div class="row">
           <div class="col-md-6 col-sm-6">
@@ -96,7 +97,7 @@
     <br>
     <!-- Sec Expereince -->
     <div class="row justify-content-md-center">
-      <div class="col-md-10 com-sm-8">
+      <div class="col-md-8 com-sm-8">
         <h4>Magical Methods Solutions ,<small> Delhi, India</small></h4>
         <div class="row">
           <div class="col-md-6">
@@ -114,13 +115,31 @@
         </ul>
       </div>
     </div>
+		<!-- 3rd Expereince -->
+		<div class="row justify-content-md-center">
+			<div class="col-md-8 com-sm-8">
+				<h4>Technoriti ,<small> Bhagalpur, India</small></h4>
+				<div class="row">
+					<div class="col-md-6">
+						<h6> <i>Web developer</i> </h6>
+					</div>
+					<div class="col-md-6">
+						<p>(2016-2018)</p>
+					</div>
+				</div>
+				<ul>
+						<li> Front end developer</li>
+						<li> Used PHP, Javascript, and MySQL to create Techfest website for three years</li>
+				</ul>
+			</div>
+		</div>
   </div>
 </section>
 <!-- End of experience -->
 <!-- SKILLS -->
 <div id="SKILLS"></div><br><br><br>
 <section>
-  <div class="container">
+  <div class="container-fluid">
     <div class="heading">
       <h2>SKILLS</h2>
     </div>
@@ -147,7 +166,7 @@
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
       </div>
       </div>
-      <div class="col-md-5 col-sm-6">
+      <div class="col-md-5 col-sm-12">
         Deep Learning
         <div class="progress">
           <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">50%</div>
@@ -170,13 +189,69 @@
         </div>
       </div>
     </div>
+		<br><br>
+		<div class="row justify-content-center">
+			<div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="60" data-speed="500">
+					<div class="tox-progress-content" data-vcenter="true">
+						<center>&nbsp;	Software Developmet</center>
+					</div>
+				</div>
+			</div>
+		  <div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="60" data-speed="500">
+					<div class="tox-progress-content" data-vcenter="true">
+							 &nbsp;&nbsp;&nbsp;&nbsp;web Development
+					</div>
+				</div>
+			</div>
+		  <div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="70" data-speed="500">
+					<div class="tox-progress-content" data-vcenter="true">
+							 &nbsp;&nbsp;&nbsp;Machine Learning
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="40" data-speed="500">
+					<div class="tox-progress-content" data-vcenter="true">
+							&nbsp;&nbsp;&nbsp;Deep Learning
+					</div>
+				</div>
+			</div>
+		  <div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="70" data-speed="500">
+					<div class="tox-progress-content" data-vcenter="true">
+							&nbsp;&nbsp;&nbsp;Database/RDBMS
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6">
+				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="50" data-speed="500">
+					<div class="tox-progress-content" data-vcenter="true">
+							&nbsp;&nbsp;&nbsp;Other skills
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
   </div>
+<script type="text/javascript" src="{{url_for('static', filename='js/tox-progress.min.js') }}"> </script>
+<!-- SCRIPT for progress bar new -->
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+			ToxProgress.create();
+			ToxProgress.animate();
+	});
+</script>
 </section>
 <!-- End of Skills -->
 <!-- Projects -->
 <div id="PROJECTS"></div><br><br>
 <section class="gallery-block compact-gallery">
-  <div class="container">
+  <div class="container-fluid">
     <div class="heading">
 			<h2>Projects</h2>
 		</div>
@@ -229,12 +304,12 @@
 <!-- ACHIEVMENTS -->
 <div id="ACECERT"></div><br><br><br>
 <section>
-  <div class="container">
+  <div class="container-fluid">
     <div class="heading">
       <h2>ACHIEVMENTS</h2>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-6">
           <h5>HACKER RANK</h5>
       </div>
     </div>

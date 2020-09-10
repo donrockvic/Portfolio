@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>V!CKY :) </title>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+  <!-- Required meta tags -->
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+  <!-- Below two css is for gallery -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
  	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
+  <style media="screen">
+  
+  </style>
 </head>
 <body>
 		{% block body %}

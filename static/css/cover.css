@@ -1,5 +1,9 @@
+
+
+
+
  #pic{
-    
+
    border-radius: 50%;
  }
 
@@ -22,4 +26,22 @@
 /* selected link */
  .slink:active {
   color: #000;
+}
+
+/* Above this mobile edit */
+.doc{
+  font-size:1rem;
+  /* color: cyan; */
+}
+@media all and (max-width: 768px) {
+  .doc{
+    font-size:1.5rem;
+    /* color: red; */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .doc{
+    font-size: 10px;
+  }
 }
