@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block body %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/tox-progress.css') }}">
 <!-- NAV -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
 <a class="navbar-brand" href="#home">Vicky</a>
@@ -191,61 +190,30 @@
     </div>
 		<br><br>
 		<div class="row justify-content-center">
-			<div class="col-md-2 col-sm-4 col-xs-6">
-				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="60" data-speed="500">
-					<div class="tox-progress-content" data-vcenter="true">
-						<center>&nbsp;	Software Developmet</center>
-					</div>
-				</div>
+			<div class="col-md-2 col-sm-4">
+				<div class="circlechart" data-percentage="60">Software Developmet</div>
 			</div>
-		  <div class="col-md-2 col-sm-4 col-xs-6">
-				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="60" data-speed="500">
-					<div class="tox-progress-content" data-vcenter="true">
-							 &nbsp;&nbsp;&nbsp;&nbsp;web Development
-					</div>
-				</div>
+			<div class="col-md-2 col-sm-4">
+			  <div class="circlechart" data-percentage="60">web Development</div>
 			</div>
-		  <div class="col-md-2 col-sm-4 col-xs-6">
-				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="70" data-speed="500">
-					<div class="tox-progress-content" data-vcenter="true">
-							 &nbsp;&nbsp;&nbsp;Machine Learning
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-4 col-xs-6">
-				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="40" data-speed="500">
-					<div class="tox-progress-content" data-vcenter="true">
-							&nbsp;&nbsp;&nbsp;Deep Learning
-					</div>
-				</div>
-			</div>
-		  <div class="col-md-2 col-sm-4 col-xs-6">
-				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="70" data-speed="500">
-					<div class="tox-progress-content" data-vcenter="true">
-							&nbsp;&nbsp;&nbsp;Database/RDBMS
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-4 col-xs-6">
-				<div class="tox-progress" data-size="160" data-thickness="12" data-color="#0275d8" data-background="#efefef" data-progress="50" data-speed="500">
-					<div class="tox-progress-content" data-vcenter="true">
-							&nbsp;&nbsp;&nbsp;Other skills
-					</div>
-				</div>
-			</div>
+			<div class="col-md-2 col-sm-4">
+			  <div class="circlechart" data-percentage="70">Machine Learning</div>
+  	 </div>
+		 <div class="col-md-2 col-sm-4">
+			 <div class="circlechart" data-percentage="40">Deep Learning</div>
+		 </div>
+		 <div class="col-md-2 col-sm-4">
+			 <div class="circlechart" data-percentage="70">Database/RDBMS</div>
+		 </div>
+		 <div class="col-md-2 col-sm-4" >
+			 <div class="circlechart" data-percentage="50">Other skills</div>
 		</div>
-
-
-
-  </div>
-<script type="text/javascript" src="{{url_for('static', filename='js/tox-progress.min.js') }}"> </script>
-<!-- SCRIPT for progress bar new -->
-<script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function () {
-			ToxProgress.create();
-			ToxProgress.animate();
-	});
-</script>
+	</div>
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	 <script src="{{url_for('static', filename='js/progresscircle.js') }}"></script>
+	 <script>
+		 $('.circlechart').circlechart(); // Initialization
+	 </script>
 </section>
 <!-- End of Skills -->
 <!-- Projects -->
@@ -257,47 +225,173 @@
 		</div>
     <div class="row no-gutters">
       <div class=" col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="lightbox" href="img/F1.jpg">
-          <img class="img-fluid image" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg">
+ 				<a class="button lightbox" data-toggle="modal" data-target="#SalaryPrediction">
+          <img class="img-fluid image" src="{{ url_for('static', filename='images/currecny.jpg') }}">
           <span class="description">
-            <span class="description-heading">Lorem Ipsum</span>
-            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <span class="description-heading">Salary prediction</span>
+            <span class="description-body">This is Salary predition app, on the basic of Year of Experience, Test score and Interview score.</span>
           </span>
         </a>
       </div>
+			<!-- Modal for first Project-->
+			<div class="modal fade" id="SalaryPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Salary Prediction</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+								machine learning
+								DATE:
+								04 May 2018
+								SITE LINK:
+								GitHub Repo
+								CLIENT:
+								Lcodi56
+								TECHNOLOGY:
+								Python
+								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
+
+								• In what state has the most deaths occurred?
+								• Over what period (start and end) was the data collected?
+								• What were the total number of deaths for 2006?
+								• What state had the least deaths in 2001?
+								• How many people die from "Diabetes mellitus" over the entire reporting period?
+			      </div>
+			    </div>
+			  </div>
+			</div>
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="lightbox" href="img/F2.jpg">
-          <img class="img-fluid image" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg">
+        <a class="button lightbox" data-toggle="modal" data-target="#TweetPrediction">
+          <img class="img-fluid image" src="{{ url_for('static', filename='images/tweeter.jpg') }}">
           <span class="description">
-            <span class="description-heading">Lorem Ipsum</span>
+            <span class="description-heading">Real or Fake Dister Tweet</span>
             <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           </span>
         </a>
       </div>
+			<!-- Modal for first Project-->
+			<div class="modal fade" id="TweetPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Real Or Fake Dister Tweet Prediction</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+							Tweet
+								machine learning
+								DATE:
+								04 May 2018
+								SITE LINK:
+								GitHub Repo
+								CLIENT:
+								Lcodi56
+								TECHNOLOGY:
+								Python
+								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
+
+								• In what state has the most deaths occurred?
+								• Over what period (start and end) was the data collected?
+								• What were the total number of deaths for 2006?
+								• What state had the least deaths in 2001?
+								• How many people die from "Diabetes mellitus" over the entire reporting period?
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
+        <a class="button lightbox" data-toggle="modal" data-target="#LoanPrediction">
+          <img class="img-fluid image" src="{{ url_for('static', filename='images/loan.jpg') }}">
+          <span class="description">
+            <span class="description-heading">Loan Prediction</span>
+            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          </span>
+        </a>
+      </div>
+			<!-- Modal for first Project-->
+			<div class="modal fade" id="LoanPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Loan Prediction</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+							Loan Prediction
+								machine learning
+								DATE:
+								04 May 2018
+								SITE LINK:
+								GitHub Repo
+								CLIENT:
+								Lcodi56
+								TECHNOLOGY:
+								Python
+								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
+
+								• In what state has the most deaths occurred?
+								• Over what period (start and end) was the data collected?
+								• What were the total number of deaths for 2006?
+								• What state had the least deaths in 2001?
+								• How many people die from "Diabetes mellitus" over the entire reporting period?
+			      </div>
+			    </div>
+			  </div>
+			</div>
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="lightbox" href="img/F3.jpg">
-          <img class="img-fluid image" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg">
+        <a class="button lightbox" data-toggle="modal" data-target="#IrisPrediction">
+          <img class="img-fluid image" src="{{ url_for('static', filename='images/iris.jpg') }}">
           <span class="description">
-            <span class="description-heading">Lorem Ipsum</span>
+            <span class="description-heading">Iris Flowerset</span>
             <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           </span>
         </a>
       </div>
+			<!-- Modal for first Project-->
+			<div class="modal fade" id="IrisPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Iris Flowerset</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+							Iris Flowerset
+								machine learning
+								DATE:
+								04 May 2018
+								SITE LINK:
+								GitHub Repo
+								CLIENT:
+								Lcodi56
+								TECHNOLOGY:
+								Python
+								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
 
-      <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="lightbox" href="img/F3.jpg">
-          <img class="img-fluid image" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg">
-          <span class="description">
-            <span class="description-heading">Lorem Ipsum</span>
-            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-          </span>
-        </a>
-      </div>
-
+								• In what state has the most deaths occurred?
+								• Over what period (start and end) was the data collected?
+								• What were the total number of deaths for 2006?
+								• What state had the least deaths in 2001?
+								• How many people die from "Diabetes mellitus" over the entire reporting period?
+			      </div>
+			    </div>
+			  </div>
+			</div>
 
 </section>
 <!-- END PROJECTS -->
