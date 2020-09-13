@@ -3,8 +3,12 @@
    padding: 20px;
  }
 
- #pic{
-   border-radius: 50%;
+ #design1{
+   border-left: solid #222 3px;
+ }
+
+ .aoi{
+   text-align-last: center;
  }
 
 /* Link syle in introduction tabs */

@@ -19,9 +19,76 @@
   </style>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{url_for('home') }}">Vicky</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarNav">
+    	<ul class="navbar-nav ml-auto">
+    		<li class="nav-item">
+    			<a class="nav-link" href="{{url_for('home') }}">Home</a>
+    		</li>
+        <li class="nav-item">
+    			<a class="nav-link" href="{{url_for('about') }}">About</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="{{url_for('projects') }}">Portfolio</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="mailto:Vicky123kumar22@gmail.com">Contact</a>
+    		</li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://drive.google.com/file/d/1rYZeCgrniPf-mmKQpAxJfLj1xIgU7XVY/view?usp=sharing">Resume</a>
+        </li>  <button type="submit" class="btn btn-primary">Predict Loan</button>
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+      </form>
+    	</ul>
+    </div>
+    </nav>
+    <!-- NAVBAR -->
 		{% block body %}
 
 		{% endblock %}
+<footer style="background:#8d8e8d">
+  <div class="container-fluid">
+    <br><br>
+    <div class="row justify-content-md-center">
+      <p class="lead">Follow Me:</p>
+      <div class="col-md-4">
+  			<a href="https://github.com/donrockvic/" target="_blank" class="slink">
+  				<img class="img-fluid"  src="{{ url_for('static', filename='images/001-github-sign.png') }}" alt="GITHUB">
+  				<!-- github.com/donrockvic/ -->
+  			</a>&nbsp;&nbsp;&nbsp;
+  			<a href="https://www.kaggle.com/vsevicky" target="_blank" class="slink">
+  				<img class="img-fluid"  src="{{ url_for('static', filename='images/002-letter-k.png') }}" alt="KAGGLE">
+  				<!-- kaggle.com/vsevicky -->
+  			</a>&nbsp;&nbsp;&nbsp;
+  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
+  				<img class="img-fluid"  src="{{ url_for('static', filename='images/004-linkedin.png') }}" alt="Vicky">
+  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
+  			</a>&nbsp;&nbsp;&nbsp;
+  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
+  				<img class="img-fluid"  src="{{ url_for('static', filename='images/001-facebook.png') }}" alt="Vicky">
+  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
+  			</a>&nbsp;&nbsp;&nbsp;
+  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
+  				<img class="img-fluid"  src="{{ url_for('static', filename='images/005-gmail-logo.png') }}" alt="Vicky">
+  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
+  			</a>&nbsp;&nbsp;&nbsp;
+  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
+  				<img class="img-fluid"  src="{{ url_for('static', filename='images/003-twitter.png') }}" alt="Vicky">
+  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
+  			</a>
+      </div>
+      <div class="col-md-4">
+          &#169; Copyright-Vicky
+      </div>
+    </div>
+    <br><br>
+  </div>
+</footer>
 </body>
 <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

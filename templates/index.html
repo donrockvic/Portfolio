@@ -1,34 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
 <!-- NAV -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="#home">Vicky</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="nav-link" href="#EXPERIENCE">Experience</a>
-		</li>
-    <li class="nav-item">
-			<a class="nav-link" href="#SKILLS">SKILLS</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#PROJECTS">Projects</a>
-		</li>
-    <li class="nav-item">
-			<a class="nav-link" href="#ACECERT">Acheivement</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="mailto:Vicky123kumar22@gmail.com">Contact Me</a>
-		</li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://drive.google.com/file/d/1rYZeCgrniPf-mmKQpAxJfLj1xIgU7XVY/view?usp=sharing">Resume</a>
-    </li>
-	</ul>
-</div>
-</nav>
 <!-- ENDNAV -->
 <span id="home"></span>
 <!-- Introduction  -->
@@ -37,27 +9,19 @@
 		<div class="jumbotron jumbotron-fluid">
 		  <div class="container-fluid">
 				<div class="row justify-content-md-center">
-					<div class="col-lg-8">
-						<center>
-							<img class="  image img-thumbnail" id="pic" src="{{ url_for('static', filename='images/2016.jpg') }}" alt="Vicky">
+					<div class="col-lg-4">
+							<br><br><br>
+							<p class="lead">I am</p>
 							<h1 class="display-4">Vicky Kumar</h1>
-						</center>
-						<p class="lead">A indendent and self-motivated software developer with 2+ year of experience and proven ability and experience in managing huge data, RDBMS, devloping web application using full stack and Data science projects with DS and Algo.I  have also participated in various competitions of competitive programming.  </p>
-						<center>
-						<a href="https://github.com/donrockvic/" target="_blank" class="slink">
-							<img class="img-fluid"  src="{{ url_for('static', filename='images/001-github-sign.png') }}" alt="GITHUB">
-							<!-- github.com/donrockvic/ -->
-						</a>&nbsp;&nbsp;&nbsp;
-						<a href="https://www.kaggle.com/vsevicky" target="_blank" class="slink">
-							<img class="img-fluid"  src="{{ url_for('static', filename='images/002-letter-k.png') }}" alt="KAGGLE">
-							<!-- kaggle.com/vsevicky -->
-						</a>&nbsp;&nbsp;&nbsp;
-						<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
-							<img class="img-fluid"  src="{{ url_for('static', filename='images/004-linkedin.png') }}" alt="Vicky">
-							<!-- linkedin.com/in/vicky-kumar-19192998/ -->
-						</a>
-						</center>
+							<p class="lead"> A Data Enginee with Web Development Skills </p>
+
+							<a href="{{url_for('projects') }}"> <button class="btn btn-dark" type="button">Projects</button> </a>
+
 					</div>
+					<div class="col-md-4">
+						<img class="image image-fluid" src="{{ url_for('static', filename='images/2016.jpg') }}" alt="Vicky">
+					</div>
+
 				</div>
 
 		  </div>
@@ -65,78 +29,71 @@
 
 </section>
 <!-- Intro end -->
-<!--  Experience -->
-<div id="EXPERIENCE"></div><br><br><br>
-<section >
-  <div class="container-fluid">
-    <div class="heading">
-      <h2>EXPERIENCE</h2>
-    </div>
-    <!-- First Ecperience -->
-    <div class="row justify-content-md-center ">
-      <div class="col-md-8 com-sm-8	">
-        <h4>WIPRO ,<small> Banglore,India</small></h4>
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <p> <i>Software Developer</i> </p>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <p>(July 2018 - Present)</p>
-          </div>
-        </div>
-        <ul>
-          <li> Got one-month training on Teradata and ETL tool Informatica,and SAP BO</li>
-          <li>Joined State-street GMT Project on 1st AUG 2018 as L2 Developer</li>
-          <li> Devloped and enhanced project with Java, Autosys JIL and UNIX script</li>
-          <li> Took help of platform like  GIT, RTC and IBM CLOUD</li>
-        </ul>
-      </div>
-    </div>
-    <br>
-    <br>
-    <!-- Sec Expereince -->
-    <div class="row justify-content-md-center">
-      <div class="col-md-8 com-sm-8">
-        <h4>Magical Methods Solutions ,<small> Delhi, India</small></h4>
-        <div class="row">
-          <div class="col-md-6">
-            <h6> <i>Web developer</i> </h6>
-          </div>
-          <div class="col-md-6">
-            <p>(May-June 2018)</p>
-          </div>
-
-        </div>
-        <ul>
-            <li> Worked as a web developer, created back-end for Magical methods.</li>
-            <li> Used Laravel(PHP), Javascript, and MySQL using complete MVC model</li>
-            <li> Using Bootstrap and jquery Developed UI of Android apps.</li>
-        </ul>
-      </div>
-    </div>
-		<!-- 3rd Expereince -->
-		<div class="row justify-content-md-center">
-			<div class="col-md-8 com-sm-8">
-				<h4>Technoriti ,<small> Bhagalpur, India</small></h4>
-				<div class="row">
-					<div class="col-md-6">
-						<h6> <i>Web developer</i> </h6>
-					</div>
-					<div class="col-md-6">
-						<p>(2016-2018)</p>
-					</div>
+<!-- About Me -->
+<section>
+	  <div class="container-fluid">
+			<div class="row justify-content-md-center">
+				<h2>Personal Details</h2>
+				<div class="col-md-10" id="design1">
+					<p class="lead">A indendent and self-motivated software developer with 2+ year of experience and proven ability
+						of developing Machine learning and Deep learning models, managing huge data  in Relational Databses, Doing Web development using full stack and skill in Data structure and Algorithm.
+						Always enthusiastic about AI and its affect on everyday life. I have also participated in various competitions of competitive programming. </p>
+					<br>
+					<p>FULL NAME: VICKY KUAMR</p>
+					<p>D.O.B:	25.AUG.1996</p>
+					<p>ADDRESS:	Sarjapur, Banglore, Indaia</p>
+					<p>E-MAIL:	vicky.123kuamr22@gmail.com</p>
+					<p>PHONE: (+91) 9006773422</p>
+					<a href="{{url_for('about') }}"> <button class="btn btn-dark" type="button">About Me</button> </a>
 				</div>
-				<ul>
-						<li> Front end developer</li>
-						<li> Used PHP, Javascript, and MySQL to create Techfest website for three years</li>
-				</ul>
+
 			</div>
 		</div>
-  </div>
 </section>
-<!-- End of experience -->
+<!-- End About Me -->
+<!-- Area of Intrest -->
+<section>
+  <div class="container-fluid">
+    <div class="heading">
+      <h2>Area Of Interest</h2>
+    </div>
+		<div class="row justify-content-md-center">
+			<div class="col-md-4 aoi">
+				<img src="{{ url_for('static', filename='images/001-computer.png') }}" alt="">
+				<h3>Machine learning</h3>
+				<p>Machine learning is more than an API call to scikit-learn. I love the math and theory as well as the implementation.</p>
+			</div>
+			<div class="col-md-4 aoi">
+				<img src="{{ url_for('static', filename='images/005-thinking.png') }}" alt="">
+				<h3>Deep Learning</h3>
+				<p>Created neural network using ANN and CNN in multiple projects. I have also implemnted Tranfer learning. </p>
+			</div>
+			<div class="col-md-4 aoi">
+				<img src="{{ url_for('static', filename='images/002-book.png') }}" alt="">
+				<h3>Statistics</h3>
+				<p>Always help me to understand the algorithm and help me in increasing the accuracy of my machine learning model. </p>
+			</div>
+			<div class="col-md-4 aoi">
+				<img src="{{ url_for('static', filename='images/006-network.png') }}" alt="">
+				<h2>Model Deployment</h2>
+				<p>I implement machine learning models in real world production systems using REST APIs.</p>
+			</div>
+			<div class="col-md-4 aoi">
+				<img src="{{ url_for('static', filename='images/003-spanner.png') }}" alt="">
+				<h3>Data Analytics</h3>
+				<p>I love telling a story. Making a beautiful and compelling presentation is one of my favorite skills.</p>
+			</div>
+			<div class="col-md-4 aoi">
+				<img src="{{ url_for('static', filename='images/004-website.png') }}" alt="">
+				<h3>Web Development</h3>
+				<p>Developing websited from last 4 years. This whole Portfolio is created by me using Flask, HTML, CSS and Js.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- End Area of Intrest -->
 <!-- SKILLS -->
-<div id="SKILLS"></div><br><br><br>
 <section>
   <div class="container-fluid">
     <div class="heading">
@@ -190,13 +147,7 @@
     </div>
 		<br><br>
 		<div class="row justify-content-center">
-			<div class="col-md-2 col-sm-4">
-				<div class="circlechart" data-percentage="60">Software Developmet</div>
-			</div>
-			<div class="col-md-2 col-sm-4">
-			  <div class="circlechart" data-percentage="60">web Development</div>
-			</div>
-			<div class="col-md-2 col-sm-4">
+		 <div class="col-md-2 col-sm-4">
 			  <div class="circlechart" data-percentage="70">Machine Learning</div>
   	 </div>
 		 <div class="col-md-2 col-sm-4">
@@ -205,9 +156,9 @@
 		 <div class="col-md-2 col-sm-4">
 			 <div class="circlechart" data-percentage="70">Database/RDBMS</div>
 		 </div>
-		 <div class="col-md-2 col-sm-4" >
-			 <div class="circlechart" data-percentage="50">Other skills</div>
-		</div>
+		 <div class="col-md-2 col-sm-4">
+ 			<div class="circlechart" data-percentage="60">web Development</div>
+ 		</div>
 	</div>
 	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	 <script src="{{url_for('static', filename='js/progresscircle.js') }}"></script>
@@ -221,7 +172,7 @@
 <section class="gallery-block compact-gallery">
   <div class="container-fluid">
     <div class="heading">
-			<h2>Projects</h2>
+			<h2>My Latest Projects</h2>
 		</div>
     <div class="row no-gutters">
       <div class=" col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
@@ -244,22 +195,19 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-								machine learning
-								DATE:
-								04 May 2018
-								SITE LINK:
-								GitHub Repo
-								CLIENT:
-								Lcodi56
-								TECHNOLOGY:
-								Python
-								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-
-								• In what state has the most deaths occurred?
-								• Over what period (start and end) was the data collected?
-								• What were the total number of deaths for 2006?
-								• What state had the least deaths in 2001?
-								• How many people die from "Diabetes mellitus" over the entire reporting period?
+								<p>Category: machine learning</p>
+								<p>DATE:04 May 2018</p>
+								<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/SalaryPrediction/model.py">Python Code</a></p>
+								<p>Demo: <a target="_blank" href="{{url_for('salary') }}">Live Demo</a> </p>
+								<p>TECHNOLOGY:Python</p>
+								<p>Description:</p>
+								<p>
+									The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
+									<ul>
+										<li>sfsdfs</li>
+										<li>jn</li>
+								 </ul>
+								</p>
 			      </div>
 			    </div>
 			  </div>
@@ -286,23 +234,20 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-							Tweet
-								machine learning
-								DATE:
-								04 May 2018
-								SITE LINK:
-								GitHub Repo
-								CLIENT:
-								Lcodi56
-								TECHNOLOGY:
-								Python
+							<p>Category: machine learning</p>
+							<p>DATE:04 May 2018</p>
+							<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/Fake_real_Disaster_tweet/RealOrFakeTweets.ipynb">GitHub Repo</a></p>
+							<p>Data: <a target="_blank" href="https://www.kaggle.com/c/nlp-getting-started/data">Kaggle Data</a>  </p>
+							<p>Demo: <a target="_blank" href="{{url_for('tweet') }}">Live Demo</a> </p>
+							<p>TECHNOLOGY:Python</p>
+							<p>Description:</p>
+							<p>
 								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-
-								• In what state has the most deaths occurred?
-								• Over what period (start and end) was the data collected?
-								• What were the total number of deaths for 2006?
-								• What state had the least deaths in 2001?
-								• How many people die from "Diabetes mellitus" over the entire reporting period?
+								<ul>
+									<li>sfsdfs</li>
+									<li>jn</li>
+							 </ul>
+							</p>
 			      </div>
 			    </div>
 			  </div>
@@ -328,28 +273,24 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-							Loan Prediction
-								machine learning
-								DATE:
-								04 May 2018
-								SITE LINK:
-								GitHub Repo
-								CLIENT:
-								Lcodi56
-								TECHNOLOGY:
-								Python
+							<p>Category: machine learning</p>
+							<p>DATE:04 May 2018</p>
+							<p>SITE LINK: <a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/LoanPrediction/LoanPrediction.ipynb">GitHub Repo</a></p>
+							<p>Data: <a target="_blank" href="https://www.kaggle.com/altruistdelhite04/loan-prediction-problem-dataset">Kaggle Data</a>  </p>
+							<p>Demo: <a target="_blank" href="{{url_for('loan') }}">Live Demo</a> </p>
+							<p>TECHNOLOGY:Python</p>
+							<p>Description:</p>
+							<p>
 								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-
-								• In what state has the most deaths occurred?
-								• Over what period (start and end) was the data collected?
-								• What were the total number of deaths for 2006?
-								• What state had the least deaths in 2001?
-								• How many people die from "Diabetes mellitus" over the entire reporting period?
+								<ul>
+									<li>sfsdfs</li>
+									<li>jn</li>
+							 </ul>
+							</p>
 			      </div>
 			    </div>
 			  </div>
 			</div>
-
 
       <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
         <a class="button lightbox" data-toggle="modal" data-target="#IrisPrediction">
@@ -371,24 +312,19 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-							Iris Flowerset
-								machine learning
-								DATE:
-								04 May 2018
-								SITE LINK:
-								GitHub Repo
-								CLIENT:
-								Lcodi56
-								TECHNOLOGY:
-								Python
+							<p>Category: machine learning</p>
+							<p>DATE:04 May 2018</p>
+							<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/IRIS_flower_classification/iris-dataset-supervised.ipynb">GitHub Repo</a></p>
+							<p>Data: <a target="_blank" href="https://www.kaggle.com/arshid/iris-flower-dataset">Kaggle Data</a>  </p>
+							<p>TECHNOLOGY:Python</p>
+							<p>Description:</p>
+							<p>
 								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-
-								• In what state has the most deaths occurred?
-								• Over what period (start and end) was the data collected?
-								• What were the total number of deaths for 2006?
-								• What state had the least deaths in 2001?
-								• How many people die from "Diabetes mellitus" over the entire reporting period?
-			      </div>
+								<ul>
+									<li>sfsdfs</li>
+									<li>jn</li>
+							 </ul>
+							</p>
 			    </div>
 			  </div>
 			</div>
@@ -400,12 +336,18 @@
 <section>
   <div class="container-fluid">
     <div class="heading">
-      <h2>ACHIEVMENTS</h2>
+      <h2>Some Other Platform</h2>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-          <h5>HACKER RANK</h5>
+    <div class="row justify-content-md-center">
+      <div class="col-md-3 col-sm-3">
+          <h5>KAGGLE</h5>
       </div>
+			<div class="col-md-3 col-sm-3">
+					<h5>GIHUB</h5>
+			</div>
+			<div class="col-md-3 col-sm-3">
+					<h5>LINKEDIN </h5>
+			</div>
     </div>
 
   </div>

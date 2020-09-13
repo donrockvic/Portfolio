@@ -37,9 +37,17 @@ def clean_data(name):
 def home():
     return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('About.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
 @app.route('/salary')
 def salary():
-    return render_template('SalaryPrediction.html')
+    return render_template('SalaryPrediction.html',prediction_text="Essentially, All Models are wrong but some are useful - George Box")
 
 @app.route('/salary/output', methods=['POST'])
 def predictSalary():
@@ -56,7 +64,7 @@ def predictSalary():
 
 @app.route('/tweet')
 def tweet():
-    return render_template('tweetsFR.html')
+    return render_template('tweetsFR.html',prediction_text="Essentially, All Models are wrong but some are useful - George Box")
 
 @app.route('/tweet/output', methods=['POST'])
 def predictTweet():
@@ -68,13 +76,13 @@ def predictTweet():
     if value == 1:
         outputs="Real tweet"
     else:
-        outputs="fake tweet"
+        outputs="Fake tweet"
     return render_template('tweetsFR.html', prediction_text=outputs)
 
 
 @app.route('/loan')
 def loan():
-    return render_template('LoanPred.html')
+    return render_template('LoanPred.html',prediction_text="Essentially, All Models are wrong but some are useful - George Box")
 
 @app.route('/loan/output', methods=['POST'])
 def predictLoan():
@@ -95,7 +103,7 @@ def predictLoan():
     if value == 1:
         outputs="You will get a loan"
     else:
-        outputs="Sorry, try again later"
+        outputs="Sorry,for Loan try again later"
     return render_template('LoanPred.html', prediction_text=outputs)
 
 @app.route('/test')

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Project DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+ 	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{url_for('home') }}">Vicky</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarNav">
+    	<ul class="navbar-nav ml-auto">
+    		<li class="nav-item">
+    			<a class="nav-link" href="{{url_for('home') }}">Home</a>
+    		</li>
+        <li class="nav-item">
+    			<a class="nav-link" href="https://github.com/donrockvic/">Github Link</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="{{url_for('projects') }}">All Projects</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="mailto:Vicky123kumar22@gmail.com">Contact</a>
+    		</li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://drive.google.com/file/d/1rYZeCgrniPf-mmKQpAxJfLj1xIgU7XVY/view?usp=sharing">Resume</a>
+        </li>
+    	</ul>
+    </div>
+    </nav>
+    <!-- NAVBAR -->
+<div class="container-fluid">
+  {% block body %}
+
+  {% endblock %}
+
+</div>
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"> </script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"> </script>
+</body>
+<html>

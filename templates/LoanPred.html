@@ -1,12 +1,17 @@
-{% extends 'base.html' %}
-
+{% extends 'baseDemo.html' %}
 {% block body %}
-<div class="container-fluid">
-
-  <div class="row">
-    <div class="col-md-6">
+<center> <h3> Machine Learning Project</h3> <center> <br>
+  <div class="row justify-content-md-center">
+    <div class="col">
+      <div class="alert alert-success" role="alert">
+       {{ prediction_text }}
+       </div>
       <h4>Loan Analysis</h4>
       <!-- Form for getting data into ML model -->
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
       <form class="" action="{{ url_for('predictLoan')}}" method="post">
           <div class="form-group">
             <label for="LoanAmountTerm">Loan_Amount_Term</label>
@@ -31,6 +36,8 @@
                <option value="Female">Female</option>
              </select>
           </div>
+        </div>
+        <div class="col-md-6">
           <div class="form-group">
             <label for="Married">Married</label>
             <select class="form-control"  name="Married" id="Married">
@@ -78,11 +85,6 @@
           <button type="submit" class="btn btn-primary">Predict Loan</button>
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
       </form>
-      <br>
-      {{ prediction_text }}
     </div>
   </div>
-</div>
-
-
-{% endblock %}
+  {% endblock %}
