@@ -9,7 +9,23 @@
 
  .aoi{
    text-align-last: center;
+   color:#626664;
+   transition: color;
+   transition-duration: 1s;
+   transition-timing-function: linear;
+   transition-delay: 0.5s;
+
  }
+
+ .aoi:hover{
+    color:#0275d8;
+   transition: color;
+   transition-duration: 1s;
+   transition-timing-function: linear;
+   transition-delay: 0.5s;
+ }
+
+
 
 /* Link syle in introduction tabs */
  .slink:link {

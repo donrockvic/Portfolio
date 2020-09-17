@@ -16,7 +16,7 @@
 							<p class="lead"> A Data Engineer with Web Development Skills </p>
 
 							<a href="{{url_for('projects') }}"> <button class="btn btn-dark" type="button">Projects</button> </a>
-
+							<br><br>
 					</div>
 					<div class="col-md-4">
 						<img class="image image-fluid" src="{{ url_for('static', filename='images/2016.jpg') }}" alt="Vicky">
@@ -51,6 +51,7 @@
 		</div>
 </section>
 <!-- End About Me -->
+<br><br><br>
 <!-- Area of Intrest -->
 <section>
   <div class="container-fluid">
@@ -168,7 +169,7 @@
 </section>
 <!-- End of Skills -->
 <!-- Projects -->
-<div id="PROJECTS"></div><br><br>
+<div id="PR#OJECTS"></div><br><br>
 <section class="gallery-block compact-gallery">
   <div class="container-fluid">
     <div class="heading">
@@ -196,17 +197,12 @@
 			      </div>
 			      <div class="modal-body">
 								<p>Category: machine learning</p>
-								<p>DATE:04 May 2018</p>
 								<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/SalaryPrediction/model.py">Python Code</a></p>
 								<p>Demo: <a target="_blank" href="{{url_for('salary') }}">Live Demo</a> </p>
-								<p>TECHNOLOGY:Python</p>
-								<p>Description:</p>
-								<p>
-									The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-									<ul>
-										<li>sfsdfs</li>
-										<li>jn</li>
-								 </ul>
+								<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
+								<p>Description:
+									A simple regression salry prediction on the basic of year of experience, a test-score and interview score.
+Max score of test and interview is 10
 								</p>
 			      </div>
 			    </div>
@@ -218,8 +214,8 @@
         <a class="button lightbox" data-toggle="modal" data-target="#TweetPrediction">
           <img class="img-fluid image" src="{{ url_for('static', filename='images/tweeter.jpg') }}">
           <span class="description">
-            <span class="description-heading">Real or Fake Dister Tweet</span>
-            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <span class="description-heading">Real or Fake Disater Tweet</span>
+            <span class="description-body">Disater tweet Prediction as Real or Fake  </span>
           </span>
         </a>
       </div>
@@ -235,18 +231,12 @@
 			      </div>
 			      <div class="modal-body">
 							<p>Category: machine learning</p>
-							<p>DATE:04 May 2018</p>
 							<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/Fake_real_Disaster_tweet/RealOrFakeTweets.ipynb">GitHub Repo</a></p>
 							<p>Data: <a target="_blank" href="https://www.kaggle.com/c/nlp-getting-started/data">Kaggle Data</a>  </p>
 							<p>Demo: <a target="_blank" href="{{url_for('tweet') }}">Live Demo</a> </p>
-							<p>TECHNOLOGY:Python</p>
-							<p>Description:</p>
-							<p>
-								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-								<ul>
-									<li>sfsdfs</li>
-									<li>jn</li>
-							 </ul>
+							<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
+							<p>Description:
+								 Predicted a disaster Tweet is real or Fake using NLTK Tfdf, with an accuracy of 80%. Also implemented data cleaning using python re and different NLP techniques.
 							</p>
 			      </div>
 			    </div>
@@ -258,7 +248,7 @@
           <img class="img-fluid image" src="{{ url_for('static', filename='images/loan.jpg') }}">
           <span class="description">
             <span class="description-heading">Loan Prediction</span>
-            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <span class="description-body">Predict loan on the basic of many caterigorical and numerical features.</span>
           </span>
         </a>
       </div>
@@ -274,18 +264,12 @@
 			      </div>
 			      <div class="modal-body">
 							<p>Category: machine learning</p>
-							<p>DATE:04 May 2018</p>
 							<p>SITE LINK: <a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/LoanPrediction/LoanPrediction.ipynb">GitHub Repo</a></p>
 							<p>Data: <a target="_blank" href="https://www.kaggle.com/altruistdelhite04/loan-prediction-problem-dataset">Kaggle Data</a>  </p>
 							<p>Demo: <a target="_blank" href="{{url_for('loan') }}">Live Demo</a> </p>
-							<p>TECHNOLOGY:Python</p>
-							<p>Description:</p>
-							<p>
-								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-								<ul>
-									<li>sfsdfs</li>
-									<li>jn</li>
-							 </ul>
+							<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
+							<p>Description:
+								 A supervised learning model to predict whether one can get a loan or not using 12 features, both categorical and numerical.
 							</p>
 			      </div>
 			    </div>
@@ -297,7 +281,7 @@
           <img class="img-fluid image" src="{{ url_for('static', filename='images/iris.jpg') }}">
           <span class="description">
             <span class="description-heading">Iris Flowerset</span>
-            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <span class="description-body">Iris Dataset classification uing Machine learning algorithm.</span>
           </span>
         </a>
       </div>
@@ -313,17 +297,11 @@
 			      </div>
 			      <div class="modal-body">
 							<p>Category: machine learning</p>
-							<p>DATE:04 May 2018</p>
 							<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/IRIS_flower_classification/iris-dataset-supervised.ipynb">GitHub Repo</a></p>
 							<p>Data: <a target="_blank" href="https://www.kaggle.com/arshid/iris-flower-dataset">Kaggle Data</a>  </p>
-							<p>TECHNOLOGY:Python</p>
-							<p>Description:</p>
-							<p>
-								The dataset contains information of people die from "Diabetes Mellitus" between 1999-2015. The task of this project was to derive valuable insights from the raw data, like:
-								<ul>
-									<li>sfsdfs</li>
-									<li>jn</li>
-							 </ul>
+							<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
+							<p>Description:
+								 Created a model to predict flower type on the Iris flower data set. I have implemented a data cleaning pipeline based on % of missing data using Scikit learn.
 							</p>
 			    </div>
 			  </div>
@@ -336,20 +314,31 @@
 <section>
   <div class="container-fluid">
     <div class="heading">
-      <h2>Some Other Platform</h2>
+      <h2>Connect me on ...</h2>
     </div>
     <div class="row justify-content-md-center">
       <div class="col-md-3 col-sm-3">
-          <h5>KAGGLE</h5>
+				<center><img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/kaggle.png') }}"><br>
+					<a href="https://www.kaggle.com/vsevicky">https://www.kaggle.com/vsevicky</a>
+          <h5>KAGGLE</h5></center>
       </div>
 			<div class="col-md-3 col-sm-3">
-					<h5>GIHUB</h5>
+				<center><img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/git.png') }}"><br>
+					<a href="https://github.com/donrockvic/">https://github.com/donrockvic/</a>
+					<h5>GIHUB</h5></center>
 			</div>
 			<div class="col-md-3 col-sm-3">
-					<h5>LINKEDIN </h5>
+			<center>	<img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/linkedin.png') }}">
+				<a href="https://www.linkedin.com/in/vicky-kumar-19192998/">https://www.linkedin.com/in/vicky-kumar-19192998/</a><br>
+					<h5>LINKEDIN </h5></center>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<center><img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/resume.png') }}"><br>
+					<a href="https://drive.google.com/file/d/1rYZeCgrniPf-mmKQpAxJfLj1xIgU7XVY/view?usp=sharing">Resume</a>
+					<h5>Download Resume </h5></center>
 			</div>
     </div>
-
+		<br><br>
   </div>
 </section>
 <!-- END ACHIEVMENTS -->

@@ -6,5 +6,98 @@
     <li class="breadcrumb-item active" aria-current="page">Projects</li>
   </ol>
 </nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Deep Learning Projects / <a target="_blank" href="https://github.com/donrockvic/DeepLearning_projects">Github link</a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Basic ANN</h5>
+          <p class="card-text">This is an iPython notebook is one implementation of one Neural network. Here we have used zero hidden layers, so in a way, this implementation is more like a Logistic regression problem. We have used the Sigmoid function as the Activation layer. We have implemented the Cat/Non-cat image classification.</p>
+          <a  target="_blank" href="https://github.com/donrockvic/DeepLearning_projects/blob/master/ANN_simple/ZeroHiddenLayer.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Simple ANN</h5>
+          <p class="card-text">In this iPython notebook I have implemented an ANN with one hidden neural network from scratch(No python framework), even though it has only one hidden layer it is giving very good output. As you can see some of the results below.</p>
+          <a  target="_blank" href="https://github.com/donrockvic/DeepLearning_projects/blob/master/ANN_simple/OneHiddenLayerANN.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Deep ANN</h5>
+          <p class="card-text">
+            This is a scratch implementation of basic deep neural network. In the notebook you can see we have two models:
+            <ul>
+              <li>Two hidden layer model</li>
+              <li>Four hidden layer model, We have added four hidden layers in our model, However it is doing good on the training set, but not so good on new data.</li>
+            </ul>
+          </p>
+          <a  target="_blank" href="https://github.com/donrockvic/DeepLearning_projects/blob/master/ANN_Deep/Complex_NN.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Car Brand Prediction:</h5>
+          <p class="card-text">Transfer learning implementation on RESNET50 model. I have used RESNET50 because this was the first model with Residual block(Skip connection) implementation, which give very good result.
+Since I have trained the model with very little data, my model is not getting all the features. It is able to done prediction with less accuracy(My model is recognizing edge feature very well, so it will give you awesome results for Lamborghini).
+</p>
+          <a  target="_blank" href="https://github.com/donrockvic/DeepLearning_projects/blob/master/Deep-Learning-Car-Brand/Transfer_Learning_Resnet_50.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+      </div>
+    </div>
+    <!-- Machine Learning Projects -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Machine Learning Projects / <a target="_blank" href="https://github.com/donrockvic/ML_projects">Github link</a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Pet Adoption</h5>
+          <p class="card-text">
+           This was a Hackerearth competion where I have to find weather the given Pet will be adopted or not based on the give features. I have created a model using Gradient Boosting classfication algorithm.
+          <br>  <br> Data: <a target="_blank" href="https://he-s3.s3.amazonaws.com/media/hackathon/hackerearth-machine-learning-challenge-pet-adoption/pet-adoption-9-5838c75b/a01c26dcd27711ea.zip?Signature=PwdcDvVZdhUObwHnvga6m4jd9o4%3D&Expires=1600055938&AWSAccessKeyId=AKIA6I2ISGOYH7WWS3G5">Hackerearth Data link</a>
+           <br> <a target="_blank" href="https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-pet-adoption/machine-learning/pet-adoption-9-5838c75b/">Competation Link</a>
+          </p>
+          <a target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/Pet%20Adoption/hackerearth_pet_final.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Fake or Real Disaster tweet</h5>
+          <p class="card-text">Created a model which predict weather a disaster Tweet is real or Fake using NLTK Tfdf, with an accuracy of 80%. Also implemented data cleaning using python re and different NLP techniques.
+           <br><br>Demo: <a target="_blank" href="https://portfoliovsevicky.herokuapp.com/tweet">Live Demo</a>
+            <br>Data: <a target="_blank" href="https://www.kaggle.com/c/nlp-getting-started/data">Kaggle</a>
+          </p>
+          <a target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/Fake_real_Disaster_tweet/RealOrFakeTweets.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Iris Flower Dataset</h5>
+          <p class="card-text">Created a model to predict flower type on the Iris flower data set. I have implemented a data cleaning pipeline based on % of missing data using Scikit learn.
+           <br><br>Data: <a target="_blank" href="https://www.kaggle.com/arshid/iris-flower-dataset">Kaggle</a>
+          </p>
+          <a target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/Fake_real_Disaster_tweet/RealOrFakeTweets.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Loan Prediction</h5>
+          <p class="card-text">A supervised learning model to predict whether one can get a loan or not using 12 features, both categorical and numerical.
+            <br><br>Demo: <a target="_blank" href="https://portfoliovsevicky.herokuapp.com/loan">Live Demo</a>
+            <br>Data: <a target="_blank" href="https://www.kaggle.com/altruistdelhite04/loan-prediction-problem-dataset">Kaggle</a>
+          </p>
+          <a target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/LoanPrediction/LoanPrediction.ipynb" class="btn btn-primary">CODE</a>
+        </div>
+        <hr>
+        <div class="card-body">
+          <h5 class="card-title">Salary Prediction </h5>
+          <p class="card-text"> A simple regression salry prediction on the basic of year of experience, a test-score and interview score.
+            <br> <br>Demo: <a target="_blank" href="https://portfoliovsevicky.herokuapp.com/salary">Live Demo</a>
+          </p>
+          <a target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/SalaryPrediction/model.py" class="btn btn-primary">CODE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
