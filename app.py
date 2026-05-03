@@ -46,12 +46,25 @@ def patch_legacy_one_hot_encoder(encoder):
 
 
 def patch_legacy_column_transformer(transformer):
+    from sklearn.preprocessing import FunctionTransformer
+
     if not hasattr(transformer, '_name_to_fitted_passthrough'):
         transformer._name_to_fitted_passthrough = {}
 
-    for _, fitted_transformer, _ in getattr(transformer, 'transformers_', []):
+    patched_transformers = []
+    for name, fitted_transformer, columns in getattr(transformer, 'transformers_', []):
         if fitted_transformer.__class__.__name__ == 'OneHotEncoder':
             patch_legacy_one_hot_encoder(fitted_transformer)
+        elif fitted_transformer == 'passthrough':
+            fitted_transformer = FunctionTransformer(
+                accept_sparse=True,
+                check_inverse=False,
+                feature_names_out='one-to-one',
+            )
+
+        patched_transformers.append((name, fitted_transformer, columns))
+
+    transformer.transformers_ = patched_transformers
 
 
 register_legacy_sklearn_modules()
