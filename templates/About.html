@@ -1,111 +1,116 @@
 {% extends 'base.html' %}
+
+{% block title %}About | Vicky Kumar - Lead Software Engineer{% endblock %}
+
 {% block body %}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{url_for('home') }}">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">About</li>
-  </ol>
-</nav>
-<!--  Experience -->
-<section >
-  <div class="container-fluid">
-    <div class="heading">
-      <h2>EXPERIENCE</h2>
+<section class="glass-card about-split">
+  <div class="about-left">
+    <div class="section-kicker">01 // About</div>
+    <h1 class="section-title">Who <em>I Am</em></h1>
+    <div class="about-body">
+      <p>
+        I am a <strong>Lead Software Engineer with 7+ years of experience</strong>
+        building backend platforms, microservices, distributed systems, and production-grade data workflows.
+      </p>
+      <p>
+        My recent work at PocketFM has focused on high-scale product engineering: backend systems for 20M+ DAUs,
+        Pocket-TV delivery, personalization, payments, experimentation, OpenSearch migration, and infrastructure cost optimization.
+      </p>
+      <p>
+        The next step in my career is deliberate: <strong>Tech Manager or Staff Engineer</strong>.
+        I want my portfolio to show the same things my resume proves: system ownership, technical judgment,
+        mentoring, cross-functional execution, and measurable business impact.
+      </p>
     </div>
-    <!-- First Ecperience -->
-    <div class="row justify-content-md-center ">
-      <div class="col-md-10 com-sm-8	">
-        <h4>WIPRO ,<small> Banglore,India</small></h4>
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <p> <i>Software Developer</i> </p>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <p>(July 2018 - Present)</p>
-          </div>
-        </div>
-        <ul>
-          <li> Got one-month training on Teradata and ETL tool Informatica,and SAP BO</li>
-          <li>Joined State-street GMT Project on 1st AUG 2018 as L2 Developer</li>
-          <li> Devloped and enhanced project with Java, Autosys JIL and UNIX script</li>
-          <li> Took help of platform like  GIT, RTC and IBM CLOUD</li>
-        </ul>
-      </div>
-    </div>
-    <br>
-    <br>
-    <!-- Sec Expereince -->
-    <div class="row justify-content-md-center">
-      <div class="col-md-10 com-sm-8">
-        <h4>Magical Methods Solutions ,<small> Delhi, India</small></h4>
-        <div class="row">
-          <div class="col-md-6">
-            <h6> <i>Web developer</i> </h6>
-          </div>
-          <div class="col-md-6">
-            <p>(May-June 2018)</p>
-          </div>
-
-        </div>
-        <ul>
-            <li> Worked as a web developer, created back-end for Magical methods.</li>
-            <li> Used Laravel(PHP), Javascript, and MySQL using complete MVC model</li>
-            <li> Using Bootstrap and jquery Developed UI of Android apps.</li>
-        </ul>
-      </div>
-    </div><br>
-		<!-- 3rd Expereince -->
-		<div class="row justify-content-md-center">
-			<div class="col-md-10 com-sm-8">
-				<h4>Technoriti ,<small> Bhagalpur, India</small></h4>
-				<div class="row">
-					<div class="col-md-6">
-						<h6> <i>Web developer</i> </h6>
-					</div>
-					<div class="col-md-6">
-						<p>(2016-2018)</p>
-					</div>
-				</div>
-				<ul>
-						<li> Front end developer</li>
-						<li> Used PHP, Javascript, and MySQL to create Techfest website for three years</li>
-				</ul>
-			</div>
-		</div>
   </div>
-</section>
-<!-- End of experience -->
-<!--  Experience --><br>
-<section >
-  <div class="container-fluid">
-    <div class="heading">
-      <h2>Course Work</h2>
+
+  <div class="about-right">
+    <div class="glass-card timeline-card">
+      <div class="section-kicker">Experience Timeline</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Feb 2022 - Present</div>
+          <div class="timeline-role">Tech Lead</div>
+          <div class="timeline-co">PocketFM, Bengaluru</div>
+          <p>Led backend initiatives supporting growth from 5M to 20M+ DAUs, shipped 75+ experiments, and delivered platform, latency, cost, retention, and revenue impact.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Mar 2021 - Feb 2022</div>
+          <div class="timeline-role">Software Developer</div>
+          <div class="timeline-co">Propel Technology, Remote</div>
+          <p>Built Python/Flask microservices with PostgreSQL, Redis, Kubernetes, Docker, and Azure; improved API performance by 40%.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">May 2018 - Mar 2021</div>
+          <div class="timeline-role">Software Developer</div>
+          <div class="timeline-co">Wipro, Bengaluru</div>
+          <p>Built large-scale data pipelines with IBM MQ and automated report delivery using UNIX Bash, Autosys, Geneos, Python APIs, and SOAP UI.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2014 - 2018</div>
+          <div class="timeline-role">B.Tech Computer Science</div>
+          <div class="timeline-co">Bhagalpur College of Engineering</div>
+          <p>Studied computer science with coursework in computer architecture, computational theory, and learning algorithms.</p>
+        </div>
+      </div>
     </div>
-    <div class="row justify-content-md-center ">
-      <div class="col-md-10 com-sm-8	">
-        <h5>Udemy</h5>
-        <ul>
-          <li>TensorFlow2.0</li>
-          <li>Machine Learning A-z</li>
-          <li>Statistics for Data science and Business Analysis</li>
-          <li>Deep Learning and Computer vision A-z</li>
-          <li>Feature Selection for Machine Learning</li>
-          <li>Feature Engineering for Machine Learning</li>
-          <li>Spark and Python for Big data</li>
-          <li>Power BI- Up and running</li>
-          <li>Tableau 202 A-Z</li>
-          <li>Django</li>
-        </ul>
-        <h5>Coursera</h5>
-        <ul>
-          <li>Machine Learning</li>
-          <li>Deep Learning</li>
-        </ul>
-        <small>This Page in progress...I will add certificate links here</small>
+
+    <div class="glass-card stack-card">
+      <div class="section-kicker mb-3">Tech Stack</div>
+      <div class="tag-cloud">
+        <span class="tag hot">Data Engineering</span>
+        <span class="tag hot">Backend Systems</span>
+        <span class="tag cool">Distributed Systems</span>
+        <span class="tag warm">Mentorship</span>
+        <span class="tag">Python</span>
+        <span class="tag">Golang</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Django</span>
+        <span class="tag">Gin</span>
+        <span class="tag">SQL</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Redis</span>
+        <span class="tag">Cassandra</span>
+        <span class="tag">Scylla</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Docker</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Azure</span>
+        <span class="tag">OpenSearch</span>
+        <span class="tag">Java</span>
+        <span class="tag">Pytest</span>
       </div>
     </div>
   </div>
 </section>
-<!-- End of Course Work -->
 
+<section class="about-support-grid">
+  <article class="glass-card support-card">
+    <div class="card-label">Leadership</div>
+    <h3>Technical Direction</h3>
+    <p>Led backend initiatives across Product, Data Science, GenAI, Infra, and Platform teams with a strong delivery rhythm.</p>
+  </article>
+  <article class="glass-card support-card">
+    <div class="card-label">Scale</div>
+    <h3>Platform Ownership</h3>
+    <p>Owned backend services, database migrations, search migration, caching, feed performance, and experiment infrastructure at scale.</p>
+  </article>
+  <article class="glass-card support-card">
+    <div class="card-label">Performance</div>
+    <h3>Reliability & Cost</h3>
+    <p>Improved latency, reduced recurring infrastructure cost, strengthened data consistency, and optimized database interactions.</p>
+  </article>
+  <article class="glass-card support-card">
+    <div class="card-label">Delivery</div>
+    <h3>Business Impact</h3>
+    <p>Delivered features tied to retention, discovery, monetization, international growth, and operational efficiency.</p>
+  </article>
+</section>
 {% endblock %}
