@@ -1,36 +1,55 @@
-
 {% extends 'baseDemo.html' %}
-{% block body %}
-   <center> <h3> Machine Learning Project</h3></center>
-   <br><br>
-   <div class="row  justify-content-md-center">
-     <div class="col-md-6">
-       <div class="alert alert-success" role="alert">
-        {{ prediction_text }}
-        </div>
-       <h4>Predict Salary Analysis</h4>
-       <!-- Form for getting data into ML model -->
-       <form class="" action="{{ url_for('predictSalary')}}" method="post">
-           <div class="form-group">
-             <label for="exampleInputEmail1">Experience </label>
-             <input type="text" class="form-control"    name="experience" placeholder="experience" required ="required" />           </div>
-             <small>Type number of year Experience in whole year e.g., 2,3...</small>
-           <div class="form-group">
-             <label for="exampleInputPassword1">Test Score</label>
-             <input type="text" class="frm-control" name="test_score" placeholder="Test Score" required="required" />
-             <small>Enter score between 0 -10  </small>
-           </div>
-           <div class="form-group">
-             <label for="exampleInputPassword1">interview_score</label>
-             <input type="text"  class="form-control" name="interview_score" placeholder="Interview Score" required="required" />
-             <small>Enter score between 0 -10  </small>
-           </div>
-           <button type="submit" class="btn btn-primary">Predict</button>
-           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-       </form>
-       <br>
 
-     </div>
-   </div>
+{% block demo_body %}
+<div class="demo-shell">
+  <aside class="glass-card demo-intro">
+    <div class="section-kicker">ML Demo / Regression</div>
+    <h1 class="section-title">Salary <em>Prediction</em></h1>
+    <p class="muted">
+      A Flask-served regression demo that shows how a trained model can be wrapped in a simple, CSRF-protected web flow.
+    </p>
+    <div class="tag-list mt-3">
+      <span class="tag">Python</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">Flask</span>
+    </div>
+    <div class="demo-actions">
+      <a class="btn-glass" href="{{ url_for('projects') }}">Back to Work</a>
+    </div>
+    <div class="demo-insights">
+      <div class="insight-card">
+        <div class="meta-label">How It Works</div>
+        <p>Form inputs are validated by the browser, submitted to Flask, transformed into model features, and passed to a scikit-learn regression artifact.</p>
+      </div>
+      <div class="insight-card">
+        <div class="meta-label">Limitations</div>
+        <p>This is a compact demonstration model. It is useful for serving flow and UX, not for real compensation decisions.</p>
+      </div>
+    </div>
+  </aside>
 
-   {% endblock %}
+  <section class="glass-card demo-form-card">
+    <div class="result-card">
+      <div class="meta-label">Result</div>
+      <div>{{ prediction_text }}</div>
+    </div>
+    <form action="{{ url_for('predictSalary')}}" method="post">
+      <div class="mb-3">
+        <label class="form-label" for="experience">Experience</label>
+        <input type="number" class="form-control" id="experience" name="experience" min="0" step="1" placeholder="For example 5" required>
+        <div class="form-text muted">Whole years of experience.</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="test_score">Test Score</label>
+        <input type="number" class="form-control" id="test_score" name="test_score" min="0" max="10" step="1" placeholder="0 - 10" required>
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="interview_score">Interview Score</label>
+        <input type="number" class="form-control" id="interview_score" name="interview_score" min="0" max="10" step="1" placeholder="0 - 10" required>
+      </div>
+      <button type="submit" class="btn-filled">Predict Salary</button>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    </form>
+  </section>
+</div>
+{% endblock %}

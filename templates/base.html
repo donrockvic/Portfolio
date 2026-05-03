@@ -1,97 +1,86 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>V!CKY :) </title>
-  <!-- Required meta tags -->
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Vicky Kumar | Lead Software Engineer{% endblock %}</title>
   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
-  <!-- Below two css is for gallery -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/progresscircle.css') }}">
- 	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
-  <style media="screen">
-
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/glass-modern.css') }}">
 </head>
-<body>
-    <!-- NAVBAR -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{url_for('home') }}">Vicky</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
+<body class="glass-app">
+  <svg class="site-bg-svg" viewBox="0 0 1200 800" aria-hidden="true" focusable="false">
+    <path d="M-50 160 C 190 60, 340 270, 560 170 S 890 80, 1250 210" fill="none" stroke-width="1" />
+    <path d="M-30 520 C 240 390, 390 660, 640 500 S 980 360, 1250 560" fill="none" stroke-width="1" />
+    <path d="M220 -50 L 980 850" fill="none" stroke-width="0.7" opacity="0.35" />
+    <path d="M520 -60 L 1120 850" fill="none" stroke-width="0.7" opacity="0.24" />
+    <line x1="80" y1="250" x2="1040" y2="620" stroke-width="0.7" opacity="0.3" />
+    <circle cx="175" cy="205" r="3" />
+    <circle cx="455" cy="182" r="2" />
+    <circle cx="760" cy="292" r="2.8" />
+    <circle cx="1024" cy="502" r="2.4" />
+  </svg>
+
+  {% set endpoint = request.endpoint or '' %}
+  {% set is_projects = endpoint in ['projects', 'salary', 'tweet', 'loan', 'predictSalary', 'predictTweet', 'predictLoan'] %}
+  {% set resume_url = url_for('static', filename='docs/vicky-kumar-techlead-resume.pdf') %}
+
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar>
+      <a class="brand" href="{{ url_for('home') }}" aria-label="Vicky Kumar home">
+        <span class="brand-name">Vicky Kumar</span>
+        <span class="brand-sub">Backend / Platform / Scale</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <div class="nav-section-label">Navigation</div>
+        <div class="glass-nav">
+          <a class="nav-item-glass {% if endpoint == 'home' %}active{% endif %}" href="{{ url_for('home') }}">
+            <span class="nav-icon">01</span> Home
+          </a>
+          <a class="nav-item-glass {% if endpoint == 'about' %}active{% endif %}" href="{{ url_for('about') }}">
+            <span class="nav-icon">02</span> About
+          </a>
+          <a class="nav-item-glass {% if is_projects %}active{% endif %}" href="{{ url_for('projects') }}">
+            <span class="nav-icon">03</span> Work
+          </a>
+          <a class="nav-item-glass" href="mailto:vicky123kumar22@gmail.com">
+            <span class="nav-icon">04</span> Contact
+          </a>
+          <a class="nav-item-glass" target="_blank" rel="noreferrer" href="{{ resume_url }}">
+            <span class="nav-icon">05</span> Resume
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" type="button" data-theme-toggle>Switch to Light</button>
+        <div class="sidebar-socials" aria-label="Social links">
+          <a class="social-btn" target="_blank" rel="noreferrer" href="https://github.com/donrockvic/">GH</a>
+          <a class="social-btn" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/vsevicky">LI</a>
+          <a class="social-btn" target="_blank" rel="noreferrer" href="{{ resume_url }}">CV</a>
+          <a class="social-btn" href="mailto:vicky123kumar22@gmail.com">EM</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-wrap">
+        {% block body %}{% endblock %}
+      </div>
+    </main>
+
+    <button class="mobile-nav-toggle" type="button" data-mobile-nav aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span class="visually-hidden">Toggle navigation</span>
     </button>
-    <div class="collapse navbar-collapse  " id="navbarNav">
-    	<ul class="navbar-nav ml-auto">
-    		<li class="nav-item">
-    			<a class="nav-link" href="{{url_for('home') }}">Home</a>
-    		</li>
-        <li class="nav-item">
-    			<a class="nav-link" href="{{url_for('about') }}">About</a>
-    		</li>
-    		<li class="nav-item">
-    			<a class="nav-link" href="{{url_for('projects') }}">Portfolio</a>
-    		</li>
-    		<li class="nav-item">
-    			<a class="nav-link" href="mailto:Vicky123kumar22@gmail.com">Contact</a>
-    		</li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://drive.google.com/file/d/1Kr2TRVyfy_QeNRtV0NQWmAQ0q_-MKYGw/view?usp=sharing">Resume</a>
-        </li>
-      </form>
-    	</ul>
-    </div>
-    </nav>
-    <!-- NAVBAR -->
-		{% block body %}
-
-		{% endblock %}
-<footer style="background:#8d8e8d">
-  <div class="container-fluid">
-    <br><br>
-    <div class="row justify-content-md-center">
-      <p class="lead">Follow Me:</p>
-      <div class="col-md-4">
-  			<a href="https://github.com/donrockvic/" target="_blank" class="slink">
-  				<img class="img-fluid"  src="{{ url_for('static', filename='images/001-github-sign.png') }}" alt="GITHUB">
-  				<!-- github.com/donrockvic/ -->
-  			</a>&nbsp;&nbsp;&nbsp;
-  			<a href="https://www.kaggle.com/vsevicky" target="_blank" class="slink">
-  				<img class="img-fluid"  src="{{ url_for('static', filename='images/002-letter-k.png') }}" alt="KAGGLE">
-  				<!-- kaggle.com/vsevicky -->
-  			</a>&nbsp;&nbsp;&nbsp;
-  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
-  				<img class="img-fluid"  src="{{ url_for('static', filename='images/004-linkedin.png') }}" alt="Vicky">
-  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
-  			</a>&nbsp;&nbsp;&nbsp;
-  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
-  				<img class="img-fluid"  src="{{ url_for('static', filename='images/001-facebook.png') }}" alt="Vicky">
-  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
-  			</a>&nbsp;&nbsp;&nbsp;
-  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
-  				<img class="img-fluid"  src="{{ url_for('static', filename='images/005-gmail-logo.png') }}" alt="Vicky">
-  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
-  			</a>&nbsp;&nbsp;&nbsp;
-  			<a href="https://www.linkedin.com/in/vicky-kumar-19192998/" target="_blank" class="slink">
-  				<img class="img-fluid"  src="{{ url_for('static', filename='images/003-twitter.png') }}" alt="Vicky">
-  				<!-- linkedin.com/in/vicky-kumar-19192998/ -->
-  			</a>
-      </div>
-      <div class="col-md-4">
-          &#169; Copyright-Vicky
-      </div>
-    </div>
-    <br><br>
   </div>
-</footer>
-</body>
-<script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/glass-modern.js') }}"></script>
+</body>
 </html>

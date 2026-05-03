@@ -1,13 +1,11 @@
 {% extends "baseDemo.html" %}
 
-{% block body %}
-<div class="row justify-content-center mt-5">
-  <div class="col-md-8 col-lg-6">
-    <div class="alert alert-danger" role="alert">
-      <h4 class="alert-heading">Form expired</h4>
+{% block demo_body %}
+<div class="glass-card demo-form-card">
+    <div class="result-card">
+      <div class="meta-label">Form expired</div>
       <p>{{ reason }}</p>
-      <a class="btn btn-outline-danger" href="{{ url_for('home') }}">Go home</a>
+      <a class="btn-glass" href="{{ url_for('home') }}">Go home</a>
     </div>
-  </div>
 </div>
 {% endblock %}

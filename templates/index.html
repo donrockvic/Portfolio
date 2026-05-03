@@ -1,346 +1,158 @@
 {% extends 'base.html' %}
+
+{% block title %}Vicky Kumar | Lead Software Engineer{% endblock %}
+
 {% block body %}
-<!-- NAV -->
-<!-- ENDNAV -->
-<span id="home"></span>
-<!-- Introduction  -->
-<section>
-
-		<div class="jumbotron jumbotron-fluid">
-		  <div class="container-fluid">
-				<div class="row justify-content-md-center">
-					<div class="col-lg-4">
-							<br><br><br>
-							<p class="lead">I am</p>
-							<h1 class="display-4">Vicky Kumar</h1>
-							<p class="lead"> A Data Engineer with Web Development Skills </p>
-
-							<a href="{{url_for('projects') }}"> <button class="btn btn-dark" type="button">Projects</button> </a>
-							<br><br>
-					</div>
-					<div class="col-md-4">
-						<img class="image image-fluid" src="{{ url_for('static', filename='images/2016.jpg') }}" alt="Vicky">
-					</div>
-
-				</div>
-
-		  </div>
-		</div>
-
-</section>
-<!-- Intro end -->
-<!-- About Me -->
-<section>
-	  <div class="container-fluid">
-			<div class="row justify-content-md-center">
-				<h2>Personal Details</h2>
-				<div class="col-md-10" id="design1">
-					<p class="lead">An indendent and self-motivated software developer with 2+ year of experience and proven ability
-						of software development and managing huge data  in Relational Databses, Doing Web development using full stack and skilled in developing Machine learning, Deep learning models, Data structure and Algorithm.
-						Always enthusiastic about AI and its affect on everyday life. I have also participated in various competitions of competitive programming. </p>
-					<br>
-					<p>FULL NAME: VICKY KUAMR</p>
-					<p>D.O.B:	25.AUG.1996</p>
-					<p>ADDRESS:	Sarjapur, Banglore, Indaia</p>
-					<p>E-MAIL:	vicky.123kuamr22@gmail.com</p>
-					<p>PHONE: (+91) 9006773422</p>
-					<a href="{{url_for('about') }}"> <button class="btn btn-dark" type="button">About Me</button> </a>
-				</div>
-
-			</div>
-		</div>
-</section>
-<!-- End About Me -->
-<br><br><br>
-<!-- Area of Intrest -->
-<section>
-  <div class="container-fluid">
-    <div class="heading">
-      <h2>Area Of Interest</h2>
+<section class="glass-card hero-card">
+  <div>
+    <div class="home-identity">
+      <span class="home-name">Vicky Kumar</span>
+      <span class="home-role">Lead Software Engineer / Backend Platform / Scale</span>
     </div>
-		<div class="row justify-content-md-center">
-			<div class="col-md-4 aoi">
-				<img src="{{ url_for('static', filename='images/001-computer.png') }}" alt="">
-				<h3>Machine learning</h3>
-				<p>Machine learning is more than an API call to scikit-learn. I love the math and theory as well as the implementation.</p>
-			</div>
-			<div class="col-md-4 aoi">
-				<img src="{{ url_for('static', filename='images/005-thinking.png') }}" alt="">
-				<h3>Deep Learning</h3>
-				<p>Created neural network using ANN and CNN in multiple projects. I have also implemnted Tranfer learning. </p>
-			</div>
-			<div class="col-md-4 aoi">
-				<img src="{{ url_for('static', filename='images/002-book.png') }}" alt="">
-				<h3>Statistics</h3>
-				<p>Always help me to understand the algorithm and help me in increasing the accuracy of my machine learning model. </p>
-			</div>
-			<div class="col-md-4 aoi">
-				<img src="{{ url_for('static', filename='images/006-network.png') }}" alt="">
-				<h2>Model Deployment</h2>
-				<p>I implement machine learning models in real world production systems using REST APIs.</p>
-			</div>
-			<div class="col-md-4 aoi">
-				<img src="{{ url_for('static', filename='images/003-spanner.png') }}" alt="">
-				<h3>Data Analytics</h3>
-				<p>I love telling a story. Making a beautiful and compelling presentation is one of my favorite skills.</p>
-			</div>
-			<div class="col-md-4 aoi">
-				<img src="{{ url_for('static', filename='images/004-website.png') }}" alt="">
-				<h3>Web Development</h3>
-				<p>Developing websited from last 4 years. This whole Portfolio is created by me using Flask, HTML, CSS and Js.</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- End Area of Intrest -->
-<!-- SKILLS -->
-<section>
-  <div class="container-fluid">
-    <div class="heading">
-      <h2>SKILLS</h2>
+    <div class="status-pill"><span class="status-dot"></span> Lead Software Engineer open to Tech Manager / Staff Engineer roles</div>
+    <h1 class="hero-title">Backend Platform <em>Lead</em><br>High-Scale Systems Builder</h1>
+    <p class="hero-copy">
+      I architect and scale secure, high-performance backend systems across Python, Golang, microservices, and cloud-native infrastructure.
+      At PocketFM, I have led platform work supporting growth from 5M to 20M+ DAUs, shipped 75+ product experiments, and delivered measurable
+      gains in latency, cost, retention, and monetization.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-filled" href="{{ url_for('projects') }}">View Case Studies</a>
+      <a class="btn-glass" href="{{ url_for('about') }}">About Me</a>
+      <a class="btn-glass" target="_blank" rel="noreferrer" href="{{ resume_url }}">Download Resume</a>
     </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-5 col-sm-12">
-        Data Structure
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
-        </div>
-        Algorithm
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-        </div>
-        SQL
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-        </div>
-        Machine Learing Algorithm
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">70%</div>
-        </div>
-      Statics
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
-      </div>
-      </div>
-      <div class="col-md-5 col-sm-12">
-        Deep Learning
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">50%</div>
-        </div>
-        Scikit-Learn
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">40%</div>
-        </div>
-        Numpy/Pandas
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
-        </div>
-        Tensorflow
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">30%</div>
-        </div>
-        Tableau/PowerBI
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">60%</div>
-        </div>
-      </div>
-    </div>
-		<br><br>
-		<div class="row justify-content-center">
-		 <div class="col-md-2 col-sm-4">
-			  <div class="circlechart" data-percentage="70">Machine Learning</div>
-  	 </div>
-		 <div class="col-md-2 col-sm-4">
-			 <div class="circlechart" data-percentage="40">Deep Learning</div>
-		 </div>
-		 <div class="col-md-2 col-sm-4">
-			 <div class="circlechart" data-percentage="70">Database/RDBMS</div>
-		 </div>
-		 <div class="col-md-2 col-sm-4">
- 			<div class="circlechart" data-percentage="60">web Development</div>
- 		</div>
-	</div>
-	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	 <script src="{{url_for('static', filename='js/progresscircle.js') }}"></script>
-	 <script>
-		 $('.circlechart').circlechart(); // Initialization
-	 </script>
-</section>
-<!-- End of Skills -->
-<!-- Projects -->
-<div id="PR#OJECTS"></div><br><br>
-<section class="gallery-block compact-gallery">
-  <div class="container-fluid">
-    <div class="heading">
-			<h2>My Latest Projects</h2>
-		</div>
-    <div class="row no-gutters">
-      <div class=" col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
- 				<a class="button lightbox" data-toggle="modal" data-target="#SalaryPrediction">
-          <img class="img-fluid image" src="{{ url_for('static', filename='images/currecny.jpg') }}">
-          <span class="description">
-            <span class="description-heading">Salary prediction</span>
-            <span class="description-body">This is Salary predition app, on the basic of Year of Experience, Test score and Interview score.</span>
-          </span>
-        </a>
-      </div>
-			<!-- Modal for first Project-->
-			<div class="modal fade" id="SalaryPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Salary Prediction</h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-								<p>Category: machine learning</p>
-								<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/SalaryPrediction/model.py">Python Code</a></p>
-								<p>Demo: <a target="_blank" href="{{url_for('salary') }}">Live Demo</a> </p>
-								<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
-								<p>Description:
-									A simple regression salry prediction on the basic of year of experience, a test-score and interview score.
-Max score of test and interview is 10
-								</p>
-			      </div>
-			    </div>
-			  </div>
-			</div>
+  </div>
 
-
-      <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="button lightbox" data-toggle="modal" data-target="#TweetPrediction">
-          <img class="img-fluid image" src="{{ url_for('static', filename='images/tweeter.jpg') }}">
-          <span class="description">
-            <span class="description-heading">Real or Fake Disater Tweet</span>
-            <span class="description-body">Disater tweet Prediction as Real or Fake  </span>
-          </span>
-        </a>
-      </div>
-			<!-- Modal for first Project-->
-			<div class="modal fade" id="TweetPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Real Or Fake Dister Tweet Prediction</h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-							<p>Category: machine learning</p>
-							<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/Fake_real_Disaster_tweet/RealOrFakeTweets.ipynb">GitHub Repo</a></p>
-							<p>Data: <a target="_blank" href="https://www.kaggle.com/c/nlp-getting-started/data">Kaggle Data</a>  </p>
-							<p>Demo: <a target="_blank" href="{{url_for('tweet') }}">Live Demo</a> </p>
-							<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
-							<p>Description:
-								 Predicted a disaster Tweet is real or Fake using NLTK Tfdf, with an accuracy of 80%. Also implemented data cleaning using python re and different NLP techniques.
-							</p>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="button lightbox" data-toggle="modal" data-target="#LoanPrediction">
-          <img class="img-fluid image" src="{{ url_for('static', filename='images/loan.jpg') }}">
-          <span class="description">
-            <span class="description-heading">Loan Prediction</span>
-            <span class="description-body">Predict loan on the basic of many caterigorical and numerical features.</span>
-          </span>
-        </a>
-      </div>
-			<!-- Modal for first Project-->
-			<div class="modal fade" id="LoanPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Loan Prediction</h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-							<p>Category: machine learning</p>
-							<p>SITE LINK: <a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/LoanPrediction/LoanPrediction.ipynb">GitHub Repo</a></p>
-							<p>Data: <a target="_blank" href="https://www.kaggle.com/altruistdelhite04/loan-prediction-problem-dataset">Kaggle Data</a>  </p>
-							<p>Demo: <a target="_blank" href="{{url_for('loan') }}">Live Demo</a> </p>
-							<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
-							<p>Description:
-								 A supervised learning model to predict whether one can get a loan or not using 12 features, both categorical and numerical.
-							</p>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3 item zoom-on-hover">
-        <a class="button lightbox" data-toggle="modal" data-target="#IrisPrediction">
-          <img class="img-fluid image" src="{{ url_for('static', filename='images/iris.jpg') }}">
-          <span class="description">
-            <span class="description-heading">Iris Flowerset</span>
-            <span class="description-body">Iris Dataset classification uing Machine learning algorithm.</span>
-          </span>
-        </a>
-      </div>
-			<!-- Modal for first Project-->
-			<div class="modal fade" id="IrisPrediction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Iris Flowerset</h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-							<p>Category: machine learning</p>
-							<p>SITE LINK:<a  target="_blank" href="https://github.com/donrockvic/ML_projects/blob/master/IRIS_flower_classification/iris-dataset-supervised.ipynb">GitHub Repo</a></p>
-							<p>Data: <a target="_blank" href="https://www.kaggle.com/arshid/iris-flower-dataset">Kaggle Data</a>  </p>
-							<p>TECHNOLOGY: Numpy, Matplotlib, Pandas, Pickle, Scikit-learn, Python</p>
-							<p>Description:
-								 Created a model to predict flower type on the Iris flower data set. I have implemented a data cleaning pipeline based on % of missing data using Scikit learn.
-							</p>
-			    </div>
-			  </div>
-			</div>
-
-</section>
-<!-- END PROJECTS -->
-<!-- ACHIEVMENTS -->
-<div id="ACECERT"></div><br><br><br>
-<section>
-  <div class="container-fluid">
-    <div class="heading">
-      <h2>Connect me on ...</h2>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-3 col-sm-3">
-				<center><img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/kaggle.png') }}"><br>
-					<a href="https://www.kaggle.com/vsevicky">https://www.kaggle.com/vsevicky</a>
-          <h5>KAGGLE</h5></center>
-      </div>
-			<div class="col-md-3 col-sm-3">
-				<center><img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/git.png') }}"><br>
-					<a href="https://github.com/donrockvic/">https://github.com/donrockvic/</a>
-					<h5>GIHUB</h5></center>
-			</div>
-			<div class="col-md-3 col-sm-3">
-			<center>	<img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/linkedin.png') }}">
-				<a href="https://www.linkedin.com/in/vicky-kumar-19192998/">https://www.linkedin.com/in/vicky-kumar-19192998/</a><br>
-					<h5>LINKEDIN </h5></center>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<center><img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='images/resume.png') }}"><br>
-					<a href="https://drive.google.com/file/d/1rYZeCgrniPf-mmKQpAxJfLj1xIgU7XVY/view?usp=sharing">Resume</a>
-					<h5>Download Resume </h5></center>
-			</div>
-    </div>
-		<br><br>
+  <div class="hero-visual" aria-hidden="true">
+    <svg class="hero-visual-svg" viewBox="0 0 360 360" focusable="false">
+      <circle class="ring" cx="180" cy="180" r="118" fill="none" stroke-width="1" stroke-dasharray="18 14" />
+      <circle class="ring alt" cx="180" cy="180" r="82" fill="none" stroke-width="1" stroke-dasharray="7 11" />
+      <path class="trace" d="M58 214 C 112 120, 196 266, 303 116" fill="none" stroke-width="1.4" />
+      <path class="trace" d="M80 118 C 150 210, 210 82, 292 220" fill="none" stroke-width="1" />
+      <path class="trace" d="M62 176 C 128 168, 140 80, 212 116 S 260 264, 314 184" fill="none" stroke-width="0.9" />
+      <line class="trace" x1="96" y1="276" x2="284" y2="78" stroke-width="0.8" />
+      <line class="trace" x1="72" y1="86" x2="304" y2="286" stroke-width="0.8" />
+      <circle class="node" cx="88" cy="122" r="4" />
+      <circle class="node" cx="160" cy="196" r="3" />
+      <circle class="node" cx="236" cy="112" r="5" />
+      <circle class="node" cx="286" cy="224" r="3.5" />
+      <circle class="node" cx="122" cy="272" r="4.5" />
+      <circle class="node" cx="304" cy="184" r="3" />
+    </svg>
   </div>
 </section>
-<!-- END ACHIEVMENTS -->
 
+<section class="stats-grid" aria-label="Career summary">
+  <div class="glass-card stat-card">
+    <div class="stat-value">7+</div>
+    <div class="stat-desc">Years Experience</div>
+  </div>
+  <div class="glass-card stat-card">
+    <div class="stat-value">20M+</div>
+    <div class="stat-desc">DAUs Supported</div>
+  </div>
+  <div class="glass-card stat-card">
+    <div class="stat-value">75+</div>
+    <div class="stat-desc">Experiments Shipped</div>
+  </div>
+  <div class="glass-card stat-card">
+    <div class="stat-value">30%</div>
+    <div class="stat-desc">API Latency Reduced</div>
+  </div>
+</section>
+
+<section class="glass-card stack-strip" aria-label="Technology stack">
+  <span class="stack-label">STACK //</span>
+  <span class="stack-pill">Python</span>
+  <span class="stack-pill">Golang</span>
+  <span class="stack-pill">Flask</span>
+  <span class="stack-pill">Django</span>
+  <span class="stack-pill">Gin</span>
+  <span class="stack-pill">SQL</span>
+  <span class="stack-pill">Redis</span>
+  <span class="stack-pill">Kafka</span>
+  <span class="stack-pill">Kubernetes</span>
+  <span class="stack-pill">Docker</span>
+  <span class="stack-pill">AWS</span>
+  <span class="stack-pill">OpenSearch</span>
+  <span class="stack-pill">Cassandra</span>
+  <span class="stack-pill">MongoDB</span>
+  <span class="stack-pill">Pytest</span>
+</section>
+
+<section class="glass-card content-section">
+  <div class="section-kicker">Leadership Signal</div>
+  <h2 class="section-title">What I <em>bring</em></h2>
+  <div class="capability-grid">
+    <article class="capability-card">
+      <div class="card-label">01 / Scale</div>
+      <h3>High-Traffic Backend Systems</h3>
+      <p>Architected backend systems that supported PocketFM growth from 5M to 20M+ DAUs with reliability and performance as first-class constraints.</p>
+    </article>
+    <article class="capability-card">
+      <div class="card-label">02 / Velocity</div>
+      <h3>Product Engineering Leadership</h3>
+      <p>Directed Pocket-TV from MVP to production in under 4 weeks and shipped 75+ experiments across engagement, monetization, and discovery.</p>
+    </article>
+    <article class="capability-card">
+      <div class="card-label">03 / Performance</div>
+      <h3>Cost & Latency Optimization</h3>
+      <p>Reduced API latency by 30%, improved API performance by 40% in earlier microservices work, and cut recurring infrastructure costs.</p>
+    </article>
+    <article class="capability-card">
+      <div class="card-label">04 / People</div>
+      <h3>Cross-Functional Leadership</h3>
+      <p>Collaborated with Data Science, GenAI, Infra, Platform, and Product teams while mentoring junior engineers and raising engineering standards.</p>
+    </article>
+  </div>
+</section>
+
+<section class="glass-card content-section">
+  <div class="section-kicker">Selected Work</div>
+  <h2 class="section-title">Impact <em>highlights</em></h2>
+  <div class="demo-grid">
+    <article class="demo-card">
+      <div class="project-type">PocketFM</div>
+      <h3>Growth Platform Scale</h3>
+      <p>Scaled backend systems through 5M to 20M+ DAUs and supported features that generated measurable retention and revenue impact.</p>
+      <div class="demo-actions">
+        <a class="btn-filled" href="{{ url_for('projects') }}">Read Case Studies</a>
+      </div>
+    </article>
+    <article class="demo-card">
+      <div class="project-type">OTT Platform</div>
+      <h3>Pocket-TV Launch</h3>
+      <p>Directed backend development from MVP to production in under 4 weeks, then supported rapid DAU growth with resilient microservices.</p>
+      <div class="demo-actions">
+        <a class="btn-filled" href="{{ url_for('projects') }}">View Work</a>
+      </div>
+    </article>
+    <article class="demo-card">
+      <div class="project-type">Experimentation</div>
+      <h3>100M+ User Allocation</h3>
+      <p>Built offline experiment allocation for 100M+ users and enabled faster A/B launches across product, content, and monetization teams.</p>
+      <div class="demo-actions">
+        <a class="btn-filled" href="{{ url_for('projects') }}">Explore Details</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="glass-card content-section">
+  <div class="section-kicker">Contact</div>
+  <h2 class="section-title">Let's <em>connect</em></h2>
+  <div class="contact-grid">
+    <div>
+      <p class="muted">
+        I am interested in Tech Manager, Staff Engineer, and backend/platform leadership opportunities where high-scale systems,
+        product velocity, and engineering quality matter together.
+      </p>
+    </div>
+    <div class="d-grid gap-2">
+      <a class="contact-link" href="mailto:vicky123kumar22@gmail.com"><span>Email</span><span>vicky123kumar22@gmail.com</span></a>
+      <a class="contact-link" target="_blank" rel="noreferrer" href="https://github.com/donrockvic/"><span>GitHub</span><span>github.com/donrockvic</span></a>
+      <a class="contact-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/vsevicky"><span>LinkedIn</span><span>linkedin.com/in/vsevicky</span></a>
+    </div>
+  </div>
+</section>
 {% endblock %}

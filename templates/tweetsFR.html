@@ -1,26 +1,46 @@
 {% extends 'baseDemo.html' %}
-{% block body %}
-<div class="container-fuid">
-  <center> <h3> Machine Learning Project</h3> <center> <br>
-  <div class="row justify-content-md-center">
-    <div class="col-md-6">
-      <div class="alert alert-success" role="alert">
-       {{ prediction_text }}
-       </div>
-      <h4>Real of Fake Disater tweet</h4>
-      <!-- Form for getting data into ML model -->
-      <form class="" action="{{ url_for('predictTweet')}}" method="post">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Enter the Tweet </label>
-            <input type="text" class="form-control" name="tweet" placeholder="Tweet" required ="required" />
-          </div>
 
-          <button type="submit" class="btn btn-primary">Predict</button>
-          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-      </form>
-
+{% block demo_body %}
+<div class="demo-shell">
+  <aside class="glass-card demo-intro">
+    <div class="section-kicker">ML Demo / NLP</div>
+    <h1 class="section-title">Disaster Tweet <em>Classifier</em></h1>
+    <p class="muted">
+      A text classification demo that connects a Flask form to a trained NLP pipeline for fast model inference.
+    </p>
+    <div class="tag-list mt-3">
+      <span class="tag">NLP</span>
+      <span class="tag">TF-IDF</span>
+      <span class="tag">Flask</span>
     </div>
-  </div>
+    <div class="demo-actions">
+      <a class="btn-glass" href="{{ url_for('projects') }}">Back to Work</a>
+    </div>
+    <div class="demo-insights">
+      <div class="insight-card">
+        <div class="meta-label">How It Works</div>
+        <p>Tweet text is cleaned, vectorized with TF-IDF style features, and classified through a serialized scikit-learn pipeline.</p>
+      </div>
+      <div class="insight-card">
+        <div class="meta-label">Limitations</div>
+        <p>Short text can be ambiguous. The demo should explain confidence and edge cases before any production use.</p>
+      </div>
+    </div>
+  </aside>
 
+  <section class="glass-card demo-form-card">
+    <div class="result-card">
+      <div class="meta-label">Result</div>
+      <div>{{ prediction_text }}</div>
+    </div>
+    <form action="{{ url_for('predictTweet')}}" method="post">
+      <div class="mb-4">
+        <label class="form-label" for="tweet">Tweet Text</label>
+        <textarea class="form-control" id="tweet" name="tweet" rows="5" placeholder="Enter a tweet to classify" required></textarea>
+      </div>
+      <button type="submit" class="btn-filled">Predict Tweet</button>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    </form>
+  </section>
 </div>
-   {% endblock %}
+{% endblock %}
